@@ -1,0 +1,22 @@
+Options -MultiViews
+
+RewriteEngine On
+DirectoryIndex index.html
+
+# Redirect only the domain root to the default Romanian version.
+RewriteCond %{THE_REQUEST} \s/+[?\s] [NC]
+RewriteRule ^$ /ro/ [R=301,L]
+
+# Redirect explicit index.html requests to their directory URLs.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
+
+# Redirect direct .html requests to extensionless canonical URLs.
+RewriteCond %{THE_REQUEST} \s/+.+\.html(?:[?\s]) [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Serve extensionless page URLs from their existing .html files.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [END]

@@ -1,0 +1,35 @@
+.breadcrumbs {
+  background: var(--white);
+}
+
+.breadcrumbs__inner {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.breadcrumbs a {
+  color: var(--teal-dark);
+  font-weight: 600;
+}
+
+.breadcrumbs__separator {
+  color: var(--coral);
+}
+
+.breadcrumbs__current {
+  color: var(--muted);
+}
+
+.breadcrumbs--hero {
+  border: 0;
+  background: transparent;
+}
+
+.breadcrumbs--hero .breadcrumbs__inner {
+  min-height: auto;
+  padding-bottom: 28px;
+}

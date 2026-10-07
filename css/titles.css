@@ -1,0 +1,65 @@
+/* Global heading system. */
+h1 {
+  margin-bottom: 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+h2 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 2.8125vw, 2.5875rem);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.06;
+}
+
+h3 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: var(--navy);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+@media (max-width: 520px) {
+  h1,
+  h2,
+  h3 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 821px) {
+  .container.prospect h2 {
+    font-size: clamp(1.2rem, 2.25vw, 2.07rem);
+  }
+}
+
+.hero__title--product {
+  max-width: none;
+  color: #284967;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(3.2rem, 6.4vw, 5.92rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.hero__title--product sup {
+  position: relative;
+  top: -0.58em;
+  margin-left: 0.07em;
+  font-size: 0.35em;
+  letter-spacing: 0;
+}

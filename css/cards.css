@@ -1,0 +1,35 @@
+.pharmacies {
+  --grid-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.pharmacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.pharmacy__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 68px;
+  color: var(--navy);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.pharmacy__logo img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  max-height: 76px;
+  object-fit: contain;
+  object-position: center;
+}

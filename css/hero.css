@@ -1,0 +1,27 @@
+.halova-hero {
+  overflow: hidden;
+}
+
+.hero__grid {
+  --grid-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 30px;
+  min-height: 720px;
+}
+
+.hero__text {
+  max-width: 510px;
+}
+
+.hero__visual {
+  position: relative;
+  min-height: 480px;
+  place-items: center;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 540px);
+  transform: none;
+}

@@ -1,0 +1,112 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  transition: background 0.2s ease;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 76px;
+}
+
+.brand {
+  color: var(--teal-dark);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.header .brand {
+  color: #485664;
+}
+
+.brand span {
+  color: inherit;
+}
+
+.brand::after {
+  position: relative;
+  top: -0.48em;
+  margin-left: 0.08em;
+  content: "®";
+  font-size: 0.42em;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  list-style: none;
+}
+
+.header li {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.nav a {
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: #ec937b;
+}
+
+.nav a[aria-current="page"] {
+  color: var(--teal-dark);
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language {
+  display: flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.language a {
+  padding: 6px 10px;
+  border-radius: 99px;
+  color: var(--muted);
+}
+
+.language a[aria-current="true"] {
+  color: white;
+  background: #ec937b;
+}
+
+.menu-button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  color: var(--teal-dark);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.menu-button[aria-expanded="true"] {
+  font-size: 1.8rem;
+}

@@ -1,0 +1,239 @@
+.page-hero,
+.product-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 36px;
+  background: transparent;
+}
+
+.page-hero p {
+  max-width: 630px;
+}
+
+.page-hero--centered p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.product-page-hero p {
+  max-width: 620px;
+}
+
+.page-hero > .container > p,
+.product-page-hero > .container > p {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.product-page-hero
+  ~ .section:not(.product-story):not(.halova-support-section):not(
+    .halova-closing-section
+  ),
+.product-page-hero
+  ~ .indication-feature:not(.indication-feature--local-action):not(
+    .indication-feature--indications
+  ) {
+  display: none;
+}
+
+.product-story {
+  display: block;
+}
+
+.composition {
+  --grid-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 55px;
+}
+
+.composition__visual {
+  position: relative;
+  min-height: 380px;
+  border-radius: 32px;
+  background: transparent;
+  overflow: hidden;
+  place-items: center;
+}
+
+.composition__image {
+  position: relative;
+  z-index: 1;
+  width: min(85%, 390px);
+}
+
+.ingredient-grid {
+  --grid-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 0;
+}
+
+.ingredient strong {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 0.92rem;
+}
+
+.ingredient span {
+  display: block;
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.benefits {
+  --grid-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 46px;
+}
+
+.benefits__product {
+  min-height: 380px;
+  border-radius: 0 0 40% 0;
+  background: #f6efed url("../img/girl.png") center / contain no-repeat;
+  box-shadow: none;
+  place-items: center;
+}
+
+.benefits__product img {
+  display: none;
+}
+
+.section--tint:has(.usage) {
+  background: var(--white);
+}
+
+.usage {
+  max-width: 1040px;
+  padding: 30px 34px;
+  color: var(--ink);
+  background: #fff8f5;
+}
+
+.usage p {
+  max-width: 940px;
+}
+
+.usage strong {
+  color: var(--ink);
+}
+
+.prospect {
+  max-width: none;
+}
+
+.prospect__section {
+  padding: 30px 0;
+}
+
+.prospect__section ul {
+  padding-left: 22px;
+}
+
+.prospect__facts {
+  --grid-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 0;
+}
+
+.prospect__fact {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--teal-pale);
+}
+
+.prospect__fact strong {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 0.8rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.prospect__fact span {
+  display: block;
+  margin-top: 0;
+  color: var(--ink);
+}
+
+/* Indications: large, readable editorial sections */
+.indications-story {
+  overflow: hidden;
+}
+
+.indication-media {
+  position: relative;
+  min-height: 390px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.indication-media img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+
+.indication-section-heading {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.indications-story > .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.indications-story .indication-feature {
+  order: 1;
+}
+.indications-story .info-cards--manifestations {
+  order: 2;
+}
+.indications-story .indication-prevalence {
+  order: 3;
+}
+.indications-story .info-cards--manifestations + .info-cards--manifestations {
+  order: 4;
+}
+.indications-story .info-cards--manifestations + .indication-feature {
+  order: 4;
+}
+
+.indications-story .info-cards--manifestations + .indication-feature .feature-item__list > li {
+  padding-left: 0;
+}
+
+.indications-story .info-cards--manifestations + .indication-feature .feature-item__list > li::before {
+  content: none;
+}
+
+.indications-story .indication-feature--gsm {
+  order: 5;
+}
+
+.indication-stat-grid {
+  --grid-columns: repeat(3, 1fr);
+}
+
+.indication-stat-grid strong {
+  display: block;
+  padding: 0;
+  margin-bottom: 18px;
+  color: var(--coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.875rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.indication-stat-grid span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.55;
+}

@@ -1,0 +1,260 @@
+/* HALOVA design system: shared visual language for every page. */
+
+/* Product page section order */
+
+main:has(.product-page-hero) {
+  display: flex;
+  flex-direction: column;
+}
+
+main:has(.product-page-hero) > * {
+  order: 10;
+}
+
+main:has(.product-page-hero) > .product-page-hero {
+  order: 1;
+}
+
+main:has(.product-page-hero) > .indication-feature--indications {
+  order: 2;
+}
+
+main:has(.product-page-hero) > .halova-support-section {
+  order: 3;
+}
+
+main:has(.product-page-hero) > .indication-feature--local-action {
+  order: 4;
+}
+
+main:has(.product-page-hero) > .halova-composition {
+  order: 5;
+}
+
+/* Product page adjustments */
+
+body:has(.product-page-hero) .halova-composition {
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+body:has(.product-page-hero) .halova-composition .ingredient strong {
+  font-size: 1.1rem;
+}
+
+body:has(.product-page-hero) .halova-composition .ingredient span {
+  margin-top: 0;
+  font-size: 0.96rem;
+}
+
+.halova-composition .ingredient-grid {
+  --grid-columns: repeat(5, 1fr);
+}
+
+.halova-composition .ingredient {
+  text-align: center;
+}
+
+.halova-composition .ingredient img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  object-fit: cover;
+}
+
+.halova-composition .ingredient:nth-child(5) img {
+  padding: 8px;
+  background: #f7f9fb;
+  object-fit: contain;
+}
+
+/* Isolated sections */
+
+.halova-composition,
+body:has(.product-page-hero) .indication-feature--indications {
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  background: transparent;
+  isolation: isolate;
+}
+
+.halova-composition .container,
+body:has(.product-page-hero)
+  .indication-feature--indications
+  > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Buttons */
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  border-color: var(--navy);
+  background: var(--navy);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  border-color: var(--coral);
+  color: var(--coral);
+  background: transparent;
+}
+
+/* Information sections */
+
+.info-cards--manifestations {
+  position: relative;
+  border: 0;
+}
+
+.indication-stat-grid {
+  gap: 16px;
+  border: 0;
+  background: transparent;
+}
+
+/* Support section */
+
+.halova-support-section {
+  position: relative;
+  background: transparent;
+}
+
+.halova-support-section__head {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.halova-support-item {
+  align-content: start;
+  min-height: 190px;
+}
+
+.halova-support-item__icon {
+  position: relative;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 22px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--coral);
+}
+
+.halova-support-item__icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.halova-support-item__icon img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+body:has(.product-page-hero) .halova-support-item__icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 18px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.halova-support-item strong,
+.halova-support-item span:not(.halova-support-item__icon) {
+  display: block;
+}
+
+.halova-support-item strong {
+  margin-bottom: 9px;
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.halova-support-item span:not(.halova-support-item__icon) {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Lists */
+
+.prospect__section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prospect__section li,
+.benefits__list li {
+  position: relative;
+  padding: 15px 0 15px 22px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.prospect__section li::before,
+.benefits__list li::before {
+  position: absolute;
+  top: 1.6em;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  border: 0;
+  border-radius: 0;
+  background: var(--coral);
+  content: "";
+}
+
+/* Images */
+
+.composition__image {
+  filter: drop-shadow(0 14px 16px rgba(41, 71, 99, 0.1));
+}
+
+.hero__image {
+  filter: drop-shadow(0 18px 18px rgba(41, 71, 99, 0.12));
+}
+
+body:has(.product-page-hero)
+  .indication-feature--indications
+  .indication-media {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Reset blocks */
+
+.usage {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Responsive */
+
+@media (max-width: 820px) {
+  .halova-indications__support {
+    --grid-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .halova-composition .ingredient-grid {
+    --grid-columns: 1fr;
+  }
+
+  .ingredient,
+  .indication-stat-grid article {
+    padding: 22px;
+  }
+}
