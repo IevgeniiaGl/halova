@@ -159,20 +159,21 @@
   }
 
   .footer .brand {
+    justify-self: center;
     white-space: nowrap;
   }
 
   .footer__socials {
     grid-row: 2;
     grid-column: 1;
-    justify-self: start;
+    justify-self: center;
   }
 
   .footer p {
     grid-row: 3;
     grid-column: 1;
-    justify-self: start;
-    text-align: left;
+    justify-self: center;
+    text-align: center;
   }
 
   .composition__visual,
