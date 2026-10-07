@@ -91,7 +91,7 @@
 .benefits__product {
   min-height: 380px;
   border-radius: 0 0 40% 0;
-  background: #f6efed url("../img/girl.png") center / contain no-repeat;
+  background: #f6efed url("../img/girl.webp?v=2") center / contain no-repeat;
   box-shadow: none;
   place-items: center;
 }
