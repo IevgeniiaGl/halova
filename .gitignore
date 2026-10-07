@@ -1,0 +1,3 @@
+# Server-specific settings (site URL, GTM, third-party scripts): created on the server, not overwritten by updates.
+/includes/
+/includes.example/

@@ -1,7 +1,14 @@
-Options -MultiViews
+Options -MultiViews +Includes
+
+# Server Side Includes: includes/head.html, includes/body.html and includes/site-url.txt are inserted into every page.
+AddOutputFilter INCLUDES .html
 
 RewriteEngine On
 DirectoryIndex index.html
+
+# Block direct access to include files and their templates (SSI subrequests are allowed).
+RewriteCond %{IS_SUBREQ} false
+RewriteRule ^includes(\.example)?/ - [F,L]
 
 # Redirect only the domain root to the default Romanian version.
 RewriteCond %{THE_REQUEST} \s/+[?\s] [NC]

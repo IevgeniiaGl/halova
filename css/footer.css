@@ -21,6 +21,16 @@
   grid-row: 1;
   grid-column: 3;
   justify-self: end;
+  color: #b3c0cd;
+  text-align: right;
+}
+
+.footer p a {
+  transition: color 0.2s;
+}
+
+.footer p a:hover {
+  color: var(--coral);
 }
 
 .footer__socials {
